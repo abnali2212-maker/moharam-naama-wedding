@@ -6,8 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#350d19">
 <title>دعوة فرح نعمة ومحرم</title>
+
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700;800&display=swap');
+
 :root{--wine:#350d19;--gold:#d9b36b;--cream:#fff0d2}
 *{box-sizing:border-box}
 body{margin:0;min-height:100vh;color:var(--cream);font-family:'Cairo',sans-serif;background:radial-gradient(ellipse at 50% 20%,#793044 0%,transparent 45%),linear-gradient(145deg,#210811,#4a1425 55%,#210811)}
@@ -18,7 +20,7 @@ body{margin:0;min-height:100vh;color:var(--cream);font-family:'Cairo',sans-serif
 .eyebrow{color:var(--gold);font-size:14px;margin:8px 0}
 h1,h2,.names,.couple{font-family:'Amiri',serif}
 h1{color:var(--cream);font-size:clamp(34px,9vw,45px);margin:12px 0}
-.names{color:var(--gold);font-size:clamp(31px,8vw,41px);margin:8px 0}
+.names,.couple{color:var(--gold);font-size:clamp(31px,8vw,41px);margin:8px 0}
 .heart{color:#ffb6c8;font-size:27px;margin:0 8px}
 .intro{max-width:330px;color:#f4dfc9;font-size:15px;line-height:2;margin:10px 0 20px}
 .gold-line{width:130px;height:1px;background:linear-gradient(to right,transparent,var(--gold),transparent);margin:10px auto}
@@ -47,22 +49,23 @@ h2{color:var(--gold);font-size:32px;margin:7px 0}
 @media(max-width:360px){.page{padding:9px}.cover{min-height:calc(100svh - 18px);padding-inline:15px}.invitation{padding:27px 14px 22px}.timebox span{font-size:20px}}
 </style>
 </head>
+
 <body>
 <main class="page">
 
 <section class="cover" id="cover">
-<span class="flower f1">❀</span><span class="flower f2">❀</span>
-<span class="flower f3">✧</span><span class="flower f4">✧</span>
+<span class="flower f1">❀</span>
+<span class="flower f2">❀</span>
+<span class="flower f3">✧</span>
+<span class="flower f4">✧</span>
 
 <div class="eyebrow">بكل حب، وفرحة من القلب</div>
 <div class="gold-line"></div>
 <h1>دعوة فرح</h1>
 <p class="intro">يسعدنا أن نشارككم أجمل لحظات العمر، ونفرح بوجودكم معانا في يوم فرحتنا</p>
-
 <div class="names">نعمة <span class="heart">♥</span> محرم</div>
 <div class="gold-line"></div>
 <p class="intro">وجودكم يكمل فرحتنا ويزيدها جمالًا 🤍</p>
-
 <button onclick="openInvitation()">افتح الدعوة ♡</button>
 </section>
 
@@ -101,26 +104,34 @@ h2{color:var(--gold);font-size:32px;margin:7px 0}
 </main>
 
 <script>
+const song = new Audio("https://amrdiab.net/wp-content/uploads/2019/03/tamally-maak.mp3");
+song.loop = true;
+song.preload = "auto";
+
 function openInvitation(){
   document.getElementById('cover').classList.add('hidden');
   document.getElementById('invitation').classList.remove('hidden');
+  song.play().catch(() => {
+    console.log("تعذر تشغيل الأغنية؛ قد يكون رابط الملف غير متاح.");
+  });
   window.scrollTo({top:0,behavior:'smooth'});
 }
 
 function updateCountdown(){
-  const target = new Date(2026, 10, 1, 20, 0, 0).getTime();
+  const target = new Date(2026,10,1,20,0,0).getTime();
   const diff = target - Date.now();
-  const ids = ['days','hours','minutes','seconds'];
 
   if(diff <= 0){
-    ids.forEach(id => document.getElementById(id).textContent = '0');
+    ['days','hours','minutes','seconds'].forEach(id => {
+      document.getElementById(id).textContent = '0';
+    });
     return;
   }
 
-  document.getElementById('days').textContent = Math.floor(diff / 86400000);
-  document.getElementById('hours').textContent = String(Math.floor((diff % 86400000) / 3600000)).padStart(2,'0');
-  document.getElementById('minutes').textContent = String(Math.floor((diff % 3600000) / 60000)).padStart(2,'0');
-  document.getElementById('seconds').textContent = String(Math.floor((diff % 60000) / 1000)).padStart(2,'0');
+  document.getElementById('days').textContent = Math.floor(diff/86400000);
+  document.getElementById('hours').textContent = String(Math.floor((diff%86400000)/3600000)).padStart(2,'0');
+  document.getElementById('minutes').textContent = String(Math.floor((diff%3600000)/60000)).padStart(2,'0');
+  document.getElementById('seconds').textContent = String(Math.floor((diff%60000)/1000)).padStart(2,'0');
 }
 
 updateCountdown();
