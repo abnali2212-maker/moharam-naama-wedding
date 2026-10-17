@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#f9f2e7">
+<meta name="theme-color" content="#fbf5ed">
 <title>دعوة فرح محرم ونعمة</title>
 
 <style>
@@ -15,8 +15,8 @@
 body{
  margin:0;
  font-family:'Cairo',sans-serif;
- background:#f8f1e7;
- color:#68451d;
+ background:#fbf5ed;
+ color:#684b2d;
  text-align:center;
 }
 
@@ -25,40 +25,70 @@ body{
  display:flex;
  align-items:center;
  justify-content:center;
- padding:24px 16px;
+ padding:26px 16px;
  position:relative;
  overflow:hidden;
 }
 
 .cover{
- background:
- radial-gradient(ellipse at top,#fffdf8 0%,#f5e4c9 65%,#e6c89c 100%);
+ background:radial-gradient(ellipse at top,#fffefa,#f7ead9 60%,#e7d0b2);
+}
+
+.invite{
+ background:radial-gradient(ellipse at top,#fffefa,#f6e9d8 70%,#e8d3b8);
+}
+
+.page:before,.page:after{
+ content:"";
+ position:absolute;
+ width:190px;
+ height:190px;
+ border:1px solid #c9a66c66;
+ border-radius:50%;
+ pointer-events:none;
+}
+
+.page:before{
+ top:-100px;
+ right:-70px;
+ box-shadow:0 0 0 12px #c9a66c12,0 0 0 24px #c9a66c0a;
+}
+
+.page:after{
+ bottom:-110px;
+ left:-75px;
+ box-shadow:0 0 0 12px #c9a66c12,0 0 0 24px #c9a66c0a;
 }
 
 .card{
  width:100%;
- max-width:440px;
+ max-width:460px;
  padding:36px 23px;
  border:1px solid #c8a15b;
  outline:1px solid #d9bd86;
  outline-offset:5px;
- border-radius:190px 190px 24px 24px;
- background:rgba(255,253,247,.91);
- box-shadow:0 15px 55px #8d672022;
+ border-radius:190px 190px 26px 26px;
+ background:rgba(255,253,248,.96);
+ box-shadow:0 18px 55px #8d672022;
  position:relative;
+ z-index:1;
 }
 
-.rose{
- font-size:36px;
- margin:10px 0;
+.invite .card{
+ border-radius:26px;
+ padding:30px 22px;
 }
 
-.small{
- font-size:14px;
- letter-spacing:1px;
+.ornament{
+ color:#b58a49;
+ font-size:27px;
+ letter-spacing:6px;
+ margin:0 0 10px;
 }
 
-h1,h2,.names{
+.small{font-size:14px}
+
+h1,h2,.names,.countdown-title{
  font-family:'Amiri',serif;
 }
 
@@ -72,6 +102,7 @@ h1{
 h2{
  font-size:30px;
  margin:10px 0;
+ color:#8f6b3b;
 }
 
 .line{
@@ -81,9 +112,7 @@ h2{
  margin:18px auto;
 }
 
-p{
- line-height:2;
-}
+p{line-height:2}
 
 button,.btn{
  border:1px solid #bd9146;
@@ -100,21 +129,9 @@ button,.btn{
  transition:.25s;
 }
 
-button:active,.btn:active{
- transform:scale(.97);
-}
+button:active,.btn:active{transform:scale(.97)}
 
 .hidden{display:none!important}
-
-.invite{
- background:
- radial-gradient(ellipse at top,#fffdf8,#f5e8d5 70%,#e8d2ad);
-}
-
-.invite .card{
- border-radius:25px;
- padding:30px 22px;
-}
 
 .names{
  font-size:43px;
@@ -154,9 +171,7 @@ button:active,.btn:active{
  color:#205b30;
 }
 
-.location{
- background:#fff;
-}
+.location{background:#fff}
 
 .footer{
  font-size:13px;
@@ -164,27 +179,83 @@ button:active,.btn:active{
  color:#8c714d;
 }
 
+.countdown-wrap{
+ margin:20px 0 14px;
+ padding:16px 12px;
+ border:1px solid #e6d1aa;
+ border-radius:20px;
+ background:linear-gradient(145deg,#fffdf8,#f8eddb);
+}
+
+.countdown-title{
+ font-size:23px;
+ color:#966f38;
+ margin-bottom:12px;
+}
+
+.countdown{
+ display:grid;
+ grid-template-columns:repeat(4,minmax(0,1fr));
+ gap:7px;
+}
+
+.count-box{
+ background:#f3e5cf;
+ border:1px solid #e4cfaa;
+ border-radius:12px;
+ padding:10px 3px;
+}
+
+.count-num{
+ font-size:25px;
+ font-weight:800;
+ color:#805d31;
+ line-height:1.3;
+ font-variant-numeric:tabular-nums;
+}
+
+.count-label{
+ font-size:12px;
+ color:#8c704c;
+}
+
+.count-note{
+ font-size:12px;
+ color:#8c704c;
+ margin-top:10px;
+}
+
 @media(max-width:380px){
  h1{font-size:36px}
  .names{font-size:35px}
  .card{padding:27px 17px}
+ .count-num{font-size:21px}
 }
 </style>
 </head>
 
 <body>
 
-<!-- صفحة البداية -->
+<!-- شاشة البداية -->
 <section class="page cover" id="cover">
  <div class="card">
-  <div class="rose">🤍🌹</div>
-  <div class="small">بسم الله الرحمن الرحيم</div>
-  <h1>دعوة فرح</h1>
+  <div class="ornament">❦ ✧ ❦</div>
+  <div class="small">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيم</div>
+
+  <h1>دعوة الفرح</h1>
   <div class="line"></div>
-  <p>مع أحلى ناس، نبدأ أجمل حكاية<br>
-  وجودكم يكمل فرحتنا 🤍</p>
-  <div class="names">محرم <span class="heart">♥</span> نعمة</div>
-  <div class="rose">💍</div>
+
+  <p>
+   بكل الحب نفتح لكم أبواب فرحتنا<br>
+   وجودكم يكمّل أجمل حكاية 🤍
+  </p>
+
+  <div class="names">
+   محرم <span class="heart">♥</span> نعمة
+  </div>
+
+  <div class="ornament">✧ ❀ ✧</div>
+
   <button onclick="openInvitation()">افتح الدعوة ♡</button>
   <div class="footer">بكل الحب ننتظركم</div>
  </div>
@@ -193,11 +264,15 @@ button:active,.btn:active{
 <!-- تفاصيل الدعوة -->
 <section class="page invite hidden" id="invitation">
  <div class="card">
-  <div class="rose">🌹🤍🌹</div>
-  <div class="small">بسم الله الرحمن الرحيم</div>
+  <div class="ornament">❦ ✧ ❦</div>
+  <div class="small">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيم</div>
+
   <h2>دعوة لحضور حفل زفاف</h2>
-  <p>بكل الحب والسعادة، يسعدنا دعوتكم<br>
-  لمشاركتنا أجمل لحظات العمر</p>
+
+  <p>
+   بكل الحب والسعادة، يسعدنا دعوتكم<br>
+   لمشاركتنا أجمل لحظات العمر
+  </p>
 
   <div class="names">
    محرم
@@ -206,6 +281,39 @@ button:active,.btn:active{
   </div>
 
   <div class="line"></div>
+
+  <!-- العد التنازلي -->
+  <div class="countdown-wrap">
+   <div class="countdown-title" id="countdownTitle">
+    باقي على فرحتنا
+   </div>
+
+   <div class="countdown">
+    <div class="count-box">
+     <div class="count-num" id="days">00</div>
+     <div class="count-label">يوم</div>
+    </div>
+
+    <div class="count-box">
+     <div class="count-num" id="hours">00</div>
+     <div class="count-label">ساعة</div>
+    </div>
+
+    <div class="count-box">
+     <div class="count-num" id="minutes">00</div>
+     <div class="count-label">دقيقة</div>
+    </div>
+
+    <div class="count-box">
+     <div class="count-num" id="seconds">00</div>
+     <div class="count-label">ثانية</div>
+    </div>
+   </div>
+
+   <div class="count-note" id="countdownNote">
+    الأحد 1 نوفمبر 2026 • الساعة 8 مساءً
+   </div>
+  </div>
 
   <div class="detail">
    <strong>📅 موعد الفرح</strong>
@@ -223,12 +331,14 @@ button:active,.btn:active{
    المريوطية
   </div>
 
-  <p>فرحتنا تحلى بوجودكم<br>
-  وتنور دنيتنا بفرحتكم 🤍</p>
+  <p>
+   فرحتنا تحلى بوجودكم<br>
+   وتنور دنيتنا بفرحتكم 🤍
+  </p>
 
   <div class="buttons">
-   <a class="btn whatsapp" id="rsvp" target="_blank"
-      rel="noopener">
+   <a class="btn whatsapp" id="rsvp"
+      target="_blank" rel="noopener">
       💚 أنوي الحضور
    </a>
 
@@ -237,10 +347,6 @@ button:active,.btn:active{
       target="_blank" rel="noopener">
       📍 افتح اللوكيشن
    </a>
-
-   <button onclick="toggleMusic()" id="musicButton">
-    ♫ تشغيل الموسيقى
-   </button>
   </div>
 
   <div class="footer">
@@ -251,30 +357,77 @@ button:active,.btn:active{
 </section>
 
 <script>
+/* تأكيد الحضور على واتساب */
 const phone = "201123541421";
+
 const message =
  "ألف مبروك يا محرم ونعمة ❤️ أؤكد حضوري حفل الزفاف يوم 1 نوفمبر 2026 الساعة 8 مساءً.";
-document.getElementById("rsvp").href =
- "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
 
+document.getElementById("rsvp").href =
+ "https://wa.me/" + phone + "?text=" +
+ encodeURIComponent(message);
+
+
+/* العد التنازلي: 1 نوفمبر 2026 الساعة 8 مساءً */
+const weddingDate = new Date(2026, 10, 1, 20, 0, 0);
+
+function pad(n){
+ return String(n).padStart(2,"0");
+}
+
+function updateCountdown(){
+ const diff = weddingDate.getTime() - Date.now();
+
+ const title = document.getElementById("countdownTitle");
+ const note = document.getElementById("countdownNote");
+
+ if(diff <= 0){
+  ["days","hours","minutes","seconds"].forEach(id=>{
+   document.getElementById(id).textContent = "00";
+  });
+
+  title.textContent = "فرحتنا بدأت ❤️";
+  note.textContent = "ألف مبروك لمحرم ونعمة";
+  return;
+ }
+
+ const total = Math.floor(diff / 1000);
+
+ document.getElementById("days").textContent =
+  pad(Math.floor(total / 86400));
+
+ document.getElementById("hours").textContent =
+  pad(Math.floor((total % 86400) / 3600));
+
+ document.getElementById("minutes").textContent =
+  pad(Math.floor((total % 3600) / 60));
+
+ document.getElementById("seconds").textContent =
+  pad(total % 60);
+}
+
+updateCountdown();
+setInterval(updateCountdown,1000);
+
+
+/* لحن رومانسي إلكتروني يبدأ بعد فتح الدعوة */
 let audioContext = null;
-let musicTimer = null;
-let musicOn = false;
+let musicStarted = false;
 let noteIndex = 0;
 
 const melody = [
  [261.63,329.63,392.00],
  [293.66,349.23,440.00],
- [261.63,329.63,392.00],
- [220.00,293.66,349.23],
- [246.94,329.63,392.00],
+ [329.63,392.00,493.88],
  [293.66,369.99,440.00],
  [261.63,329.63,392.00],
- [220.00,261.63,329.63]
+ [246.94,329.63,392.00],
+ [220.00,293.66,349.23],
+ [246.94,329.63,392.00]
 ];
 
 function playChord(){
- if(!musicOn || !audioContext) return;
+ if(!audioContext) return;
 
  const notes = melody[noteIndex % melody.length];
  const now = audioContext.currentTime;
@@ -283,60 +436,64 @@ function playChord(){
   const oscillator = audioContext.createOscillator();
   const gain = audioContext.createGain();
 
-  oscillator.type = "sine";
+  oscillator.type = index === 0 ? "triangle" : "sine";
   oscillator.frequency.value = frequency;
 
   gain.gain.setValueAtTime(0.0001,now);
+
   gain.gain.exponentialRampToValueAtTime(
-   index === 0 ? 0.045 : 0.022,now+0.12
+   index === 0 ? 0.075 : 0.035,
+   now + 0.16
   );
+
   gain.gain.exponentialRampToValueAtTime(
-   0.0001,now+1.25
+   0.0001,
+   now + 1.7
   );
 
   oscillator.connect(gain);
   gain.connect(audioContext.destination);
 
   oscillator.start(now);
-  oscillator.stop(now+1.3);
+  oscillator.stop(now + 1.75);
  });
 
  noteIndex++;
 }
 
-async function toggleMusic(){
+async function startMusic(){
  try{
+  const AudioCtx =
+   window.AudioContext || window.webkitAudioContext;
+
+  if(!AudioCtx || musicStarted) return;
+
   if(!audioContext){
-   audioContext = new (window.AudioContext ||
-   window.webkitAudioContext)();
+   audioContext = new AudioCtx();
   }
 
   if(audioContext.state === "suspended"){
    await audioContext.resume();
   }
 
-  musicOn = !musicOn;
+  musicStarted = true;
+  playChord();
 
-  if(musicOn){
-   playChord();
-   musicTimer = setInterval(playChord,1300);
-   document.getElementById("musicButton").textContent =
-    "♫ إيقاف الموسيقى";
-  }else{
-   clearInterval(musicTimer);
-   document.getElementById("musicButton").textContent =
-    "♫ تشغيل الموسيقى";
-  }
+  setInterval(playChord,1750);
+
  }catch(error){
-  alert("تعذر تشغيل الصوت على هذا الجهاز.");
+  /* الدعوة تظل تعمل حتى لو الصوت غير مدعوم */
  }
 }
 
+
+/* فتح الدعوة وتشغيل اللحن */
 function openInvitation(){
  document.getElementById("cover").classList.add("hidden");
  document.getElementById("invitation").classList.remove("hidden");
+
  window.scrollTo(0,0);
- toggleMusic();
+ startMusic();
 }
 </script>
 
