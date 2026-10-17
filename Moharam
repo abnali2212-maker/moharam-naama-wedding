@@ -1,0 +1,344 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f9f2e7">
+<title>دعوة فرح محرم ونعمة</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700;800&display=swap');
+
+*{box-sizing:border-box}
+
+body{
+ margin:0;
+ font-family:'Cairo',sans-serif;
+ background:#f8f1e7;
+ color:#68451d;
+ text-align:center;
+}
+
+.page{
+ min-height:100vh;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ padding:24px 16px;
+ position:relative;
+ overflow:hidden;
+}
+
+.cover{
+ background:
+ radial-gradient(ellipse at top,#fffdf8 0%,#f5e4c9 65%,#e6c89c 100%);
+}
+
+.card{
+ width:100%;
+ max-width:440px;
+ padding:36px 23px;
+ border:1px solid #c8a15b;
+ outline:1px solid #d9bd86;
+ outline-offset:5px;
+ border-radius:190px 190px 24px 24px;
+ background:rgba(255,253,247,.91);
+ box-shadow:0 15px 55px #8d672022;
+ position:relative;
+}
+
+.rose{
+ font-size:36px;
+ margin:10px 0;
+}
+
+.small{
+ font-size:14px;
+ letter-spacing:1px;
+}
+
+h1,h2,.names{
+ font-family:'Amiri',serif;
+}
+
+h1{
+ font-size:45px;
+ line-height:1.5;
+ margin:12px 0;
+ color:#a57832;
+}
+
+h2{
+ font-size:30px;
+ margin:10px 0;
+}
+
+.line{
+ width:110px;
+ height:1px;
+ background:#c6a15e;
+ margin:18px auto;
+}
+
+p{
+ line-height:2;
+}
+
+button,.btn{
+ border:1px solid #bd9146;
+ border-radius:35px;
+ padding:13px 24px;
+ font-family:'Cairo',sans-serif;
+ font-size:16px;
+ font-weight:700;
+ background:linear-gradient(135deg,#d5b574,#f8e7bc,#c49a4c);
+ color:#543719;
+ cursor:pointer;
+ text-decoration:none;
+ display:inline-block;
+ transition:.25s;
+}
+
+button:active,.btn:active{
+ transform:scale(.97);
+}
+
+.hidden{display:none!important}
+
+.invite{
+ background:
+ radial-gradient(ellipse at top,#fffdf8,#f5e8d5 70%,#e8d2ad);
+}
+
+.invite .card{
+ border-radius:25px;
+ padding:30px 22px;
+}
+
+.names{
+ font-size:43px;
+ color:#936727;
+ line-height:1.6;
+}
+
+.heart{
+ color:#b38a45;
+ font-size:26px;
+ margin:0 8px;
+}
+
+.detail{
+ background:#fffaf1;
+ border:1px solid #ead8b5;
+ border-radius:16px;
+ padding:12px;
+ margin:12px 0;
+}
+
+.detail strong{
+ display:block;
+ font-size:18px;
+ margin-bottom:4px;
+}
+
+.buttons{
+ display:grid;
+ gap:12px;
+ margin-top:22px;
+}
+
+.whatsapp{
+ background:#e1f2e3;
+ border-color:#91c59a;
+ color:#205b30;
+}
+
+.location{
+ background:#fff;
+}
+
+.footer{
+ font-size:13px;
+ margin-top:22px;
+ color:#8c714d;
+}
+
+@media(max-width:380px){
+ h1{font-size:36px}
+ .names{font-size:35px}
+ .card{padding:27px 17px}
+}
+</style>
+</head>
+
+<body>
+
+<!-- صفحة البداية -->
+<section class="page cover" id="cover">
+ <div class="card">
+  <div class="rose">🤍🌹</div>
+  <div class="small">بسم الله الرحمن الرحيم</div>
+  <h1>دعوة فرح</h1>
+  <div class="line"></div>
+  <p>مع أحلى ناس، نبدأ أجمل حكاية<br>
+  وجودكم يكمل فرحتنا 🤍</p>
+  <div class="names">محرم <span class="heart">♥</span> نعمة</div>
+  <div class="rose">💍</div>
+  <button onclick="openInvitation()">افتح الدعوة ♡</button>
+  <div class="footer">بكل الحب ننتظركم</div>
+ </div>
+</section>
+
+<!-- تفاصيل الدعوة -->
+<section class="page invite hidden" id="invitation">
+ <div class="card">
+  <div class="rose">🌹🤍🌹</div>
+  <div class="small">بسم الله الرحمن الرحيم</div>
+  <h2>دعوة لحضور حفل زفاف</h2>
+  <p>بكل الحب والسعادة، يسعدنا دعوتكم<br>
+  لمشاركتنا أجمل لحظات العمر</p>
+
+  <div class="names">
+   محرم
+   <div class="heart">♥</div>
+   نعمة
+  </div>
+
+  <div class="line"></div>
+
+  <div class="detail">
+   <strong>📅 موعد الفرح</strong>
+   الأحد 1 نوفمبر 2026
+  </div>
+
+  <div class="detail">
+   <strong>🕗 الساعة</strong>
+   8 مساءً
+  </div>
+
+  <div class="detail">
+   <strong>📍 مكان الفرح</strong>
+   قاعة سيتي مارك<br>
+   المريوطية
+  </div>
+
+  <p>فرحتنا تحلى بوجودكم<br>
+  وتنور دنيتنا بفرحتكم 🤍</p>
+
+  <div class="buttons">
+   <a class="btn whatsapp" id="rsvp" target="_blank"
+      rel="noopener">
+      💚 أنوي الحضور
+   </a>
+
+   <a class="btn location"
+      href="https://maps.app.goo.gl/8NwRdt1E4R21xxgR7?g_st=aw"
+      target="_blank" rel="noopener">
+      📍 افتح اللوكيشن
+   </a>
+
+   <button onclick="toggleMusic()" id="musicButton">
+    ♫ تشغيل الموسيقى
+   </button>
+  </div>
+
+  <div class="footer">
+   حضوركم شرف وفرحتكم أجمل هدية<br>
+   محرم ونعمة ❤️
+  </div>
+ </div>
+</section>
+
+<script>
+const phone = "201123541421";
+const message =
+ "ألف مبروك يا محرم ونعمة ❤️ أؤكد حضوري حفل الزفاف يوم 1 نوفمبر 2026 الساعة 8 مساءً.";
+document.getElementById("rsvp").href =
+ "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+
+let audioContext = null;
+let musicTimer = null;
+let musicOn = false;
+let noteIndex = 0;
+
+const melody = [
+ [261.63,329.63,392.00],
+ [293.66,349.23,440.00],
+ [261.63,329.63,392.00],
+ [220.00,293.66,349.23],
+ [246.94,329.63,392.00],
+ [293.66,369.99,440.00],
+ [261.63,329.63,392.00],
+ [220.00,261.63,329.63]
+];
+
+function playChord(){
+ if(!musicOn || !audioContext) return;
+
+ const notes = melody[noteIndex % melody.length];
+ const now = audioContext.currentTime;
+
+ notes.forEach((frequency,index)=>{
+  const oscillator = audioContext.createOscillator();
+  const gain = audioContext.createGain();
+
+  oscillator.type = "sine";
+  oscillator.frequency.value = frequency;
+
+  gain.gain.setValueAtTime(0.0001,now);
+  gain.gain.exponentialRampToValueAtTime(
+   index === 0 ? 0.045 : 0.022,now+0.12
+  );
+  gain.gain.exponentialRampToValueAtTime(
+   0.0001,now+1.25
+  );
+
+  oscillator.connect(gain);
+  gain.connect(audioContext.destination);
+
+  oscillator.start(now);
+  oscillator.stop(now+1.3);
+ });
+
+ noteIndex++;
+}
+
+async function toggleMusic(){
+ try{
+  if(!audioContext){
+   audioContext = new (window.AudioContext ||
+   window.webkitAudioContext)();
+  }
+
+  if(audioContext.state === "suspended"){
+   await audioContext.resume();
+  }
+
+  musicOn = !musicOn;
+
+  if(musicOn){
+   playChord();
+   musicTimer = setInterval(playChord,1300);
+   document.getElementById("musicButton").textContent =
+    "♫ إيقاف الموسيقى";
+  }else{
+   clearInterval(musicTimer);
+   document.getElementById("musicButton").textContent =
+    "♫ تشغيل الموسيقى";
+  }
+ }catch(error){
+  alert("تعذر تشغيل الصوت على هذا الجهاز.");
+ }
+}
+
+function openInvitation(){
+ document.getElementById("cover").classList.add("hidden");
+ document.getElementById("invitation").classList.remove("hidden");
+ window.scrollTo(0,0);
+ toggleMusic();
+}
+</script>
+
+</body>
+</html>
