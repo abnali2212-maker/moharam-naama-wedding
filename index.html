@@ -3,437 +3,128 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#350d19">
-<title>دعوة فرح محرم ونعمة</title>
-
+<title>دعوة فرح نعمة ومحرم</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700;800&display=swap');
-
-:root {
-  --wine: #350d19;
-  --wine2: #571728;
-  --gold: #d9b36b;
-  --cream: #fff0d2;
-}
-
-* { box-sizing: border-box; }
-
-body {
-  margin: 0;
-  min-height: 100vh;
-  color: var(--cream);
-  font-family: 'Cairo', sans-serif;
-  background:
-    radial-gradient(ellipse at 50% 20%, #7c3040 0%, transparent 45%),
-    radial-gradient(ellipse at 0% 100%, #682033 0%, transparent 42%),
-    linear-gradient(145deg, #210811, #4a1425 55%, #210811);
-  overflow-x: hidden;
-}
-
-body::before {
-  content: "✦  ❦  ✧  ❦  ✦";
-  position: fixed;
-  top: 12px;
-  left: 0;
-  right: 0;
-  text-align: center;
-  color: #d9b36b35;
-  font-size: 26px;
-  letter-spacing: 10px;
-  pointer-events: none;
-}
-
-.page {
-  width: min(100%, 520px);
-  min-height: 100vh;
-  margin: auto;
-  padding: 22px 15px 30px;
-  position: relative;
-}
-
-.cover, .invitation {
-  position: relative;
-  overflow: hidden;
-  border: 1px solid var(--gold);
-  border-radius: 220px 220px 24px 24px;
-  background:
-    radial-gradient(ellipse at top, #793044 0%, transparent 55%),
-    linear-gradient(160deg, #501525, #290a14 70%);
-  box-shadow: 0 0 0 5px #d9b36b12,
-              0 20px 55px #0008,
-              inset 0 0 40px #d9b36b0d;
-}
-
-.cover {
-  min-height: calc(100svh - 44px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 65px 23px 45px;
-}
-
-.cover::before, .invitation::before {
-  content: "";
-  position: absolute;
-  inset: 10px;
-  border: 1px solid #d9b36b75;
-  border-radius: inherit;
-  pointer-events: none;
-}
-
-.cover::after {
-  content: "❦";
-  position: absolute;
-  top: 25px;
-  color: var(--gold);
-  font-size: 35px;
-}
-
-.eyebrow {
-  color: var(--gold);
-  letter-spacing: 2px;
-  font-size: 13px;
-  margin: 8px 0;
-}
-
-.cover h1 {
-  font-family: 'Amiri', serif;
-  color: var(--cream);
-  font-size: clamp(34px, 10vw, 49px);
-  margin: 12px 0;
-  line-height: 1.5;
-  text-shadow: 0 3px 20px #0007;
-}
-
-.names {
-  color: var(--gold);
-  font-family: 'Amiri', serif;
-  font-size: clamp(31px, 9vw, 43px);
-  margin: 10px 0;
-  line-height: 1.7;
-}
-
-.heart {
-  color: #e9b7ad;
-  font-size: 24px;
-  margin: 3px 0;
-}
-
-.cover .intro {
-  max-width: 320px;
-  color: #f4dfc9;
-  font-size: 15px;
-  line-height: 2;
-  margin: 12px 0 25px;
-}
-
-.gold-line {
-  width: 120px;
-  height: 1px;
-  background: linear-gradient(to right, transparent, var(--gold), transparent);
-  margin: 10px auto;
-}
-
-button, .action {
-  font-family: 'Cairo', sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  text-decoration: none;
-  border: 1px solid var(--gold);
-  border-radius: 30px;
-  padding: 12px 25px;
-  background: linear-gradient(135deg, #f0d59a, #c3974e);
-  color: #35101b;
-  box-shadow: 0 7px 20px #0003;
-  cursor: pointer;
-  transition: transform .2s;
-}
-
-button:active, .action:active {
-  transform: scale(.97);
-}
-
-.flower {
-  position: absolute;
-  color: #d9b36b;
-  opacity: .8;
-  font-size: 33px;
-  pointer-events: none;
-}
-
-.f1 { top: 85px; right: 16px; transform: rotate(-20deg); }
-.f2 { top: 85px; left: 16px; transform: rotate(20deg); }
-.f3 { bottom: 45px; right: 17px; font-size: 25px; }
-.f4 { bottom: 45px; left: 17px; font-size: 25px; }
-
-.hidden { display: none !important; }
-
-.invitation {
-  border-radius: 24px;
-  padding: 35px 22px 28px;
-  text-align: center;
-  animation: appear .7s ease both;
-}
-
-@keyframes appear {
-  from { opacity: 0; transform: translateY(15px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.invitation .top-ornament {
-  color: var(--gold);
-  font-size: 34px;
-  margin: 0 0 5px;
-}
-
-.invitation h2 {
-  font-family: 'Amiri', serif;
-  color: var(--gold);
-  font-size: 32px;
-  margin: 5px 0;
-}
-
-.invitation .welcome {
-  font-family: 'Amiri', serif;
-  font-size: 20px;
-  line-height: 2;
-  color: var(--cream);
-  margin: 10px 0;
-}
-
-.invitation .couple {
-  font-family: 'Amiri', serif;
-  font-size: clamp(30px, 8vw, 40px);
-  color: var(--gold);
-  margin: 10px 0 15px;
-}
-
-.detail {
-  margin: 17px 0;
-  padding: 15px 10px;
-  border-top: 1px solid #d9b36b60;
-  border-bottom: 1px solid #d9b36b60;
-  background: #ffffff06;
-}
-
-.detail p {
-  line-height: 2;
-  margin: 5px 0;
-  font-size: 15px;
-}
-
-.detail strong { color: var(--gold); }
-
-.count-title {
-  color: var(--gold);
-  margin: 22px 0 12px;
-  font-size: 16px;
-}
-
-.countdown {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 7px;
-  direction: rtl;
-}
-
-.timebox {
-  border: 1px solid #d9b36b80;
-  border-radius: 13px;
-  padding: 11px 2px;
-  background: linear-gradient(160deg, #713044, #3a101e);
-}
-
-.timebox span {
-  display: block;
-  font-size: 24px;
-  font-weight: 800;
-  color: var(--gold);
-  font-variant-numeric: tabular-nums;
-}
-
-.timebox small {
-  display: block;
-  color: #f5e3c9;
-  font-size: 11px;
-  margin-top: 4px;
-}
-
-.message {
-  font-family: 'Amiri', serif;
-  color: #f7e5ca;
-  font-size: 19px;
-  line-height: 2;
-  margin: 22px 0;
-}
-
-.actions {
-  display: grid;
-  gap: 11px;
-  margin: 20px 0 8px;
-}
-
-.action {
-  display: block;
-  width: 100%;
-}
-
-.action.secondary {
-  background: transparent;
-  color: var(--gold);
-  box-shadow: none;
-}
-
-.footer {
-  color: #d9b36b;
-  font-size: 12px;
-  margin-top: 23px;
-  opacity: .85;
-}
-
-.music-note {
-  font-size: 12px;
-  color: #f1d7a6;
-  margin-top: 13px;
-}
-
-@media (max-width: 360px) {
-  .page { padding: 12px 9px 20px; }
-  .cover { min-height: calc(100svh - 24px); padding-inline: 16px; }
-  .invitation { padding: 30px 15px 23px; }
-  .timebox span { font-size: 21px; }
-}
+:root{--wine:#350d19;--gold:#d9b36b;--cream:#fff0d2}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;color:var(--cream);font-family:'Cairo',sans-serif;background:radial-gradient(ellipse at 50% 20%,#793044 0%,transparent 45%),linear-gradient(145deg,#210811,#4a1425 55%,#210811)}
+.page{width:min(100%,520px);min-height:100vh;margin:auto;padding:15px}
+.cover,.invitation{position:relative;overflow:hidden;border:1px solid var(--gold);background:radial-gradient(ellipse at top,#793044 0%,transparent 55%),linear-gradient(160deg,#501525,#290a14 70%);box-shadow:0 0 0 5px #d9b36b12,0 20px 55px #0008}
+.cover{min-height:calc(100svh - 30px);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:50px 22px 35px;border-radius:180px 180px 25px 25px}
+.cover:before,.invitation:before{content:"";position:absolute;inset:9px;border:1px solid #d9b36b75;border-radius:inherit;pointer-events:none}
+.eyebrow{color:var(--gold);font-size:14px;margin:8px 0}
+h1,h2,.names,.couple{font-family:'Amiri',serif}
+h1{color:var(--cream);font-size:clamp(34px,9vw,45px);margin:12px 0}
+.names{color:var(--gold);font-size:clamp(31px,8vw,41px);margin:8px 0}
+.heart{color:#ffb6c8;font-size:27px;margin:0 8px}
+.intro{max-width:330px;color:#f4dfc9;font-size:15px;line-height:2;margin:10px 0 20px}
+.gold-line{width:130px;height:1px;background:linear-gradient(to right,transparent,var(--gold),transparent);margin:10px auto}
+button,.action{display:block;font-family:'Cairo',sans-serif;font-size:15px;font-weight:700;text-decoration:none;text-align:center;border:1px solid var(--gold);border-radius:30px;padding:12px 20px;background:linear-gradient(135deg,#f0d59a,#c3974e);color:#35101b;box-shadow:0 7px 20px #0003;cursor:pointer;width:100%}
+.cover button{width:auto;min-width:190px}
+.flower{position:absolute;color:var(--gold);opacity:.85;font-size:31px;pointer-events:none}
+.f1{top:82px;right:16px}.f2{top:82px;left:16px}.f3{bottom:42px;right:17px}.f4{bottom:42px;left:17px}
+.hidden{display:none!important}
+.invitation{border-radius:25px;padding:30px 21px 25px;text-align:center;animation:appear .6s ease both}
+@keyframes appear{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.ornament{color:var(--gold);font-size:32px}
+h2{color:var(--gold);font-size:32px;margin:7px 0}
+.welcome{font-family:'Amiri',serif;font-size:21px;line-height:2}
+.detail{margin:17px 0;padding:14px 8px;border-top:1px solid #d9b36b60;border-bottom:1px solid #d9b36b60;background:#ffffff06}
+.detail p{line-height:2;margin:5px 0;font-size:15px}
+.detail strong,.count-title{color:var(--gold)}
+.count-title{margin:22px 0 12px;font-size:16px}
+.countdown{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px}
+.timebox{border:1px solid #d9b36b80;border-radius:13px;padding:11px 2px;background:linear-gradient(160deg,#713044,#3a101e)}
+.timebox span{display:block;font-size:23px;font-weight:800;color:var(--gold);font-variant-numeric:tabular-nums}
+.timebox small{display:block;color:#f5e3c9;font-size:11px;margin-top:4px}
+.message{font-family:'Amiri',serif;color:#f7e5ca;font-size:19px;line-height:2;margin:22px 0}
+.actions{display:grid;gap:11px;margin:20px 0 8px}
+.action.secondary{background:transparent;color:var(--gold);box-shadow:none}
+.footer{color:var(--gold);font-size:12px;margin-top:20px;opacity:.9}
+@media(max-width:360px){.page{padding:9px}.cover{min-height:calc(100svh - 18px);padding-inline:15px}.invitation{padding:27px 14px 22px}.timebox span{font-size:20px}}
 </style>
 </head>
-
 <body>
 <main class="page">
 
-  <section class="cover" id="cover">
-    <span class="flower f1">❀</span>
-    <span class="flower f2">❀</span>
-    <span class="flower f3">✧</span>
-    <span class="flower f4">✧</span>
+<section class="cover" id="cover">
+<span class="flower f1">❀</span><span class="flower f2">❀</span>
+<span class="flower f3">✧</span><span class="flower f4">✧</span>
 
-    <div class="eyebrow">بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ</div>
-    <div class="gold-line"></div>
-    <h1>دعوة الفرح</h1>
-    <p class="intro">
-      بكل الحب والفرحة، نتشرف بدعوتكم لمشاركتنا
-      أجمل لحظات العمر
-    </p>
-    <div class="heart">♡</div>
-    <div class="names">محرم ونعمة</div>
-    <div class="gold-line"></div>
-    <p class="intro">وجودكم يكمل فرحتنا ويزيد ليلتنا جمالًا</p>
-    <button id="openBtn" onclick="openInvitation()">افتح الدعوة ♡</button>
-    <div class="footer">ليلة من العمر • ذكرى لا تُنسى</div>
-  </section>
+<div class="eyebrow">بكل حب، وفرحة من القلب</div>
+<div class="gold-line"></div>
+<h1>دعوة فرح</h1>
+<p class="intro">يسعدنا أن نشارككم أجمل لحظات العمر، ونفرح بوجودكم معانا في يوم فرحتنا</p>
 
-  <section class="invitation hidden" id="invitation">
-    <div class="top-ornament">❦ ✧ ❦</div>
-    <div class="eyebrow">دعوة خاصة بكل الحب</div>
-    <h2>فرحتنا تكمل بيكم</h2>
-    <div class="gold-line"></div>
-    <p class="welcome">بكل الحب والسعادة،<br>ندعوكم لمشاركتنا فرحتنا</p>
-    <div class="couple">محرم ♡ نعمة</div>
+<div class="names">نعمة <span class="heart">♥</span> محرم</div>
+<div class="gold-line"></div>
+<p class="intro">وجودكم يكمل فرحتنا ويزيدها جمالًا 🤍</p>
 
-    <div class="detail">
-      <p>✦ <strong>يوم الفرح</strong> ✦</p>
-      <p>الأحد، 1 نوفمبر 2026</p>
-      <p>الساعة <strong>8 مساءً</strong></p>
-      <div class="gold-line"></div>
-      <p>✦ <strong>مكان الفرح</strong> ✦</p>
-      <p>قاعة سيتي مارك – المنصوريه</p>
-    </div>
+<button onclick="openInvitation()">افتح الدعوة ♡</button>
+</section>
 
-    <h3 class="count-title">باقي على أجمل ليلة ♡</h3>
-    <div class="countdown">
-      <div class="timebox"><span id="days">--</span><small>يوم</small></div>
-      <div class="timebox"><span id="hours">--</span><small>ساعة</small></div>
-      <div class="timebox"><span id="minutes">--</span><small>دقيقة</small></div>
-      <div class="timebox"><span id="seconds">--</span><small>ثانية</small></div>
-    </div>
+<section class="invitation hidden" id="invitation">
+<div class="ornament">❦</div>
+<div class="eyebrow">بسم الله الرحمن الرحيم</div>
+<h2>دعوة لحضور حفل زفاف</h2>
+<div class="couple">نعمة <span class="heart">♥</span> محرم</div>
+<div class="gold-line"></div>
 
-    <p class="message">
-      فرحتنا مش هتكمل غير بوجودكم معانا،<br>
-      مستنيينكم تشاركونا أحلى يوم في حياتنا 🤍
-    </p>
+<p class="welcome">بكل الحب والفرحة،<br>نتشرف بدعوتكم لمشاركتنا أجمل يوم في حياتنا</p>
 
-    <div class="actions">
-      <a class="action" target="_blank" rel="noopener"
-         href="https://maps.app.goo.gl/8NwRdt1E4R21xxgR7?g_st=aw">
-         📍 افتح الموقع على الخريطة
-      </a>
-      <a class="action secondary" target="_blank" rel="noopener"
+<div class="detail">
+<p>💍 <strong>اليوم:</strong> الأحد 1 نوفمبر 2026</p>
+<p>🕗 <strong>الساعة:</strong> 8 مساءً</p>
+<p>📍 <strong>المكان:</strong> قاعة سيتي مارك – المريوطية</p>
+</div>
 
-https://wa.me/201123541421?text=%D8%A3%D9%84%D9%81%20%D9%85%D8%A8%D8%B1%D9%88%D9%83%D8%8C%20%D8%B1%D8%A8%D9%86%D8%A7%20%D9%8A%D8%AA%D9%85%D9%85%20%D9%84%D9%83%D9%85%20%D8%B9%D9%84%D9%89%20%D8%AE%D9%8A%D8%B1%20%E2%9D%A4%EF%B8%8F%20%D9%88%D8%A5%D9%86%20%D8%B4%D8%A7%D8%A1%20%D8%A7%D9%84%D9%84%D9%87%20%D8%A3%D9%86%D9%88%D9%8A%20%D8%A7%D9%84%D8%AD%D8%B6%D9%88%D8%B1.
+<div class="count-title">باقي على أجمل يوم ❤️</div>
+<div class="countdown">
+<div class="timebox"><span id="days">0</span><small>يوم</small></div>
+<div class="timebox"><span id="hours">00</span><small>ساعة</small></div>
+<div class="timebox"><span id="minutes">00</span><small>دقيقة</small></div>
+<div class="timebox"><span id="seconds">00</span><small>ثانية</small></div>
+</div>
 
-      </a>
-    </div>
+<p class="message">فرحتنا مش هتكمل غير بوجودكم معانا 🤍<br>ربنا يجعل أيامكم كلها أفراح وسعادة</p>
 
-    <div class="music-note" id="musicNote">♪ موسيقى الدعوة الرومانسية</div>
-    <div class="footer">بالحب تبدأ الحكايات الجميلة ♡</div>
-    <div class="top-ornament" style="margin-top:14px">❦ ✧ ❦</div>
-  </section>
+<div class="actions">
+<a class="action" href="https://maps.app.goo.gl/8NwRdt1E4R21xxgR7?g_st=aw" target="_blank" rel="noopener">📍 افتح الموقع</a>
+<a class="action secondary" href="https://wa.me/201123541421?text=%D8%A3%D9%84%D9%81%20%D9%85%D8%A8%D8%B1%D9%88%D9%83%D8%8C%20%D8%B1%D8%A8%D9%86%D8%A7%20%D9%8A%D8%AA%D9%85%D9%85%20%D9%84%D9%83%D9%85%20%D8%B9%D9%84%D9%89%20%D8%AE%D9%8A%D8%B1%20%F0%9F%A4%8D%20%D9%88%D8%A5%D9%86%20%D8%B4%D8%A7%D8%A1%20%D8%A7%D9%84%D9%84%D9%87%20%D8%A3%D9%86%D9%88%D9%8A%20%D8%A7%D9%84%D8%AD%D8%B6%D9%88%D8%B1.%E2%9D%A4%EF%B8%8F" target="_blank" rel="noopener">💌 أنوي الحضور على واتساب</a>
+</div>
 
+<div class="footer">بالفرح نلتقي، وبالمحبة نحتفل ♥</div>
+</section>
 </main>
 
-<audio id="weddingMusic" preload="none" loop>
-  <source src="https://amrdiab.net/wp-content/uploads/2019/03/tamally-maak.mp3" type="audio/mpeg">
-</audio>
-
 <script>
-const music = document.getElementById('weddingMusic');
-music.volume = 0.75;
-
-function openInvitation() {
+function openInvitation(){
   document.getElementById('cover').classList.add('hidden');
   document.getElementById('invitation').classList.remove('hidden');
-
-  music.play().then(() => {
-    document.getElementById('musicNote').textContent =
-      '♪ تم تشغيل موسيقى الدعوة ♡';
-  }).catch(() => {
-    document.getElementById('musicNote').textContent =
-      'تعذر تشغيل الموسيقى تلقائيًا؛ تحقق من الاتصال بالإنترنت.';
-  });
-
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  window.scrollTo({top:0,behavior:'smooth'});
 }
 
-const targetDate = new Date(2026, 10, 1, 20, 0, 0).getTime();
+function updateCountdown(){
+  const target = new Date(2026, 10, 1, 20, 0, 0).getTime();
+  const diff = target - Date.now();
+  const ids = ['days','hours','minutes','seconds'];
 
-function updateCountdown() {
-  let remaining = targetDate - Date.now();
-
-  if (remaining <= 0) {
-    ['days','hours','minutes','seconds'].forEach(id => {
-      document.getElementById(id).textContent = '0';
-    });
-    document.querySelector('.count-title').textContent =
-      'أجمل ليلة بدأت ❤️';
+  if(diff <= 0){
+    ids.forEach(id => document.getElementById(id).textContent = '0');
     return;
   }
 
-  const days = Math.floor(remaining / 86400000);
-  remaining %= 86400000;
-  const hours = Math.floor(remaining / 3600000);
-  remaining %= 3600000;
-  const minutes = Math.floor(remaining / 60000);
-  const seconds = Math.floor((remaining % 60000) / 1000);
-
-  document.getElementById('days').textContent = days;
-  document.getElementById('hours').textContent = hours;
-  document.getElementById('minutes').textContent = minutes;
-  document.getElementById('seconds').textContent = seconds;
+  document.getElementById('days').textContent = Math.floor(diff / 86400000);
+  document.getElementById('hours').textContent = String(Math.floor((diff % 86400000) / 3600000)).padStart(2,'0');
+  document.getElementById('minutes').textContent = String(Math.floor((diff % 3600000) / 60000)).padStart(2,'0');
+  document.getElementById('seconds').textContent = String(Math.floor((diff % 60000) / 1000)).padStart(2,'0');
 }
 
 updateCountdown();
-setInterval(updateCountdown, 1000);
+setInterval(updateCountdown,1000);
 </script>
 </body>
 </html>
