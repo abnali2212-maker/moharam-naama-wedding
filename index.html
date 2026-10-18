@@ -104,16 +104,25 @@ h2{color:var(--gold);font-size:32px;margin:7px 0}
 </main>
 
 <script>
-const song = new Audio("./646628.mp4");
+const song = document.createElement("video");
+song.src = "./HnVideoEditor_2026_10_18_194522651.mp4";
 song.loop = true;
 song.preload = "auto";
+song.playsInline = true;
+song.setAttribute("playsinline", "");
+song.style.position = "fixed";
+song.style.width = "1px";
+song.style.height = "1px";
+song.style.opacity = "0";
+song.style.pointerEvents = "none";
+document.body.appendChild(song);
 
 function openInvitation(){
   document.getElementById('cover').classList.add('hidden');
   document.getElementById('invitation').classList.remove('hidden');
 
-  song.play().catch(() => {
-    console.log("تعذر تشغيل الأغنية. تأكد من رفع ملف 646628.mp4 بجوار index.html على GitHub.");
+  song.play().catch((error) => {
+    console.log("تعذر تشغيل الأغنية:", error);
   });
 
   window.scrollTo({top:0,behavior:'smooth'});
