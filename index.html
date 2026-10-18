@@ -1,4 +1,4 @@
-فه
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -63,7 +63,7 @@ h2{color:var(--gold);font-size:32px;margin:7px 0}
 <div class="gold-line"></div>
 <h1>دعوة فرح</h1>
 <p class="intro">يسعدنا أن نشارككم أجمل لحظات العمر، ونفرح بوجودكم معانا في يوم فرحتنا</p>
-<div class="names">محرم <span class="heart">♥</span> نعمه</div>
+<div class="names">نعمة <span class="heart">♥</span> محرم</div>
 <div class="gold-line"></div>
 <p class="intro">وجودكم يكمل فرحتنا ويزيدها جمالًا 🤍</p>
 <button onclick="openInvitation()">افتح الدعوة ♡</button>
@@ -73,14 +73,15 @@ h2{color:var(--gold);font-size:32px;margin:7px 0}
 <div class="ornament">❦</div>
 <div class="eyebrow">بسم الله الرحمن الرحيم</div>
 <h2>دعوة لحضور حفل زفاف</h2>
-<div class="couple">محرم <span class="heart">♥</span> نعمه</div>
+<div class="couple">نعمة <span class="heart">♥</span> محرم</div>
 <div class="gold-line"></div>
 
 <p class="welcome">بكل الحب والفرحة،<br>نتشرف بدعوتكم لمشاركتنا أجمل يوم في حياتنا</p>
 
 <div class="detail">
-<p>💍 <strong>اليوم:</strong> الأحد 1 / 11 / 2026</p>
-<p>🕗 <strong> الحضور الساعة:</strong> 8 مساءً</p> قاعه سيتي مارك - طريق المنصوريه – بعد مسجد الشعراوي - دقيقه من الدائري   </p>
+<p>💍 <strong>اليوم:</strong> الأحد 1 نوفمبر 2026</p>
+<p>🕗 <strong>الساعة:</strong> 8 مساءً</p>
+<p>📍 <strong>المكان:</strong> قاعة سيتي مارك – المريوطية</p>
 </div>
 
 <div class="count-title">باقي على أجمل يوم ❤️</div>
@@ -103,16 +104,18 @@ h2{color:var(--gold);font-size:32px;margin:7px 0}
 </main>
 
 <script>
-const song = new Audio("https://amrdiab.net/wp-content/uploads/2019/03/tamally-maak.mp3");
+const song = new Audio("./646628.mp4");
 song.loop = true;
 song.preload = "auto";
 
 function openInvitation(){
   document.getElementById('cover').classList.add('hidden');
   document.getElementById('invitation').classList.remove('hidden');
+
   song.play().catch(() => {
-    console.log("تعذر تشغيل الأغنية؛ قد يكون رابط الملف غير متاح.");
+    console.log("تعذر تشغيل الأغنية. تأكد من رفع ملف 646628.mp4 بجوار index.html على GitHub.");
   });
+
   window.scrollTo({top:0,behavior:'smooth'});
 }
 
